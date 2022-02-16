@@ -3,13 +3,13 @@ name: CI/CD Pipeline
 on:
   push:
     paths-ignore:
-      - 'docs/**'
+      - 'webGL-build/**'
   pull_request:
     paths-ignore:
-      - 'docs/**'
+      - 'webGL-build/**'
   workflow_dispatch:
     paths-ignore:
-      - 'docs/**'
+      - 'webGL-build/**'
 
 jobs:
   caches:
@@ -68,3 +68,71 @@ jobs:
         with:
           name: Test results for ${{ matrix.testMode }}
           path: ${{ steps.tests.outputs.artifactsPath }}
+
+  builds:
+    name: Build ${{ matrix.targetPlatform }}
+    runs-on: ubuntu-latest
+    needs: caches
+    strategy:
+      fail-fast: false
+      matrix:
+        projectPath:
+          - unity/allbright-unity-ai
+        targetPlatform:
+          - WebGL
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ matrix.projectPath }}/Library
+          key: Library-${{ matrix.projectPath}}/${{ matrix.targetPlatform }}
+          restore-keys: |
+            Library-${{ matrix.projectPath }}-
+            Library-
+      - uses: game-ci/unity-builder@v2
+        id: webGL-build
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: ${{ matrix.targetPlatform }}
+          projectPath: ${{ matrix.projectPath }}
+          buildName: ${{ matrix.targetPlatform }}
+          allowDirtyBuild: true
+
+        # - name: Remove mobile browser warning
+        # run: scripts/commands/remove-mobile-warning.sh
+        # shell: bash
+
+        # - name: Read the value of the build output
+        # run: scripts/queries/detect-expected-values.sh
+        # shell: bash
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
+
+  deploys:
+    name: Deploys WebGL to Github Pages
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: [tests, builds]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: Build-WebGL
+          path: build/WebGL
+
+      - uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: main
+          folder: build/WebGL
+          target-folder: webGL-build
