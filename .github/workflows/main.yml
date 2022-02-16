@@ -19,7 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - unity/andrewallbright-unity-ai
+          - unity/allbright-unity-ai
     steps:
       - uses: actions/cache@v2
         with:
@@ -36,7 +36,7 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - unity/andrewallbright-unity-ai
+          - unity/allbright-unity-ai
         testMode:
           - editmode
     steps:
