@@ -14,6 +14,9 @@
 ### WebGL demo
 [https://aallbrig.github.io/allbright-unity-ai/webGL-build/WebGL/index.html](https://aallbrig.github.io/allbright-unity-ai/webGL-build/WebGL/index.html)
 
+### Source code
+[https://github.com/aallbrig/allbright-unity-ai](https://github.com/aallbrig/allbright-unity-ai)
+
 ## Library documentation
 **Alpha** always read the code
 
