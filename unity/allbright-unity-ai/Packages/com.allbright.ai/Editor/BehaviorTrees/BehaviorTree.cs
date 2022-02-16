@@ -15,19 +15,17 @@ namespace Editor.BehaviorTrees
         public Behavior RootBehavior { get; }
         // public Behavior CurrentBehavior { get; private set; }
 
-        public void Tick()
-        {
+        public void Tick() =>
             // DESIGN DECISION: when a BT re-evaluates, should it pick up from where it left off?
             // (aka remember the current node?)
             // ...because right now, it just sorta executes the whole thing
             RootBehavior.Evaluate();
-        }
 
         public string PrintTree()
         {
             var stringRepresentation = "Behavior Tree\n";
             var behaviorStack = new Stack<BehaviorLevel>();
-            behaviorStack.Push(new BehaviorLevel {Level = 0, Behavior = RootBehavior});
+            behaviorStack.Push(new BehaviorLevel { Level = 0, Behavior = RootBehavior });
             while (behaviorStack.Count != 0)
             {
                 var nextBehaviorLevel = behaviorStack.Pop();
@@ -37,7 +35,7 @@ namespace Editor.BehaviorTrees
                 if (nextBehaviorLevel.Behavior is Composite nextComposite)
                     for (var i = nextComposite.Children.Count - 1; i >= 0; i--)
                         behaviorStack.Push(new BehaviorLevel
-                            {Level = nextBehaviorLevel.Level + 1, Behavior = nextComposite.Children[i]});
+                            { Level = nextBehaviorLevel.Level + 1, Behavior = nextComposite.Children[i] });
             }
             return stringRepresentation;
         }

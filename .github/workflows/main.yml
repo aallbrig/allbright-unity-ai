@@ -38,6 +38,7 @@ jobs:
         projectPath:
           - unity/allbright-unity-ai
         testMode:
+          - playmode
           - editmode
     steps:
       - uses: actions/checkout@v2

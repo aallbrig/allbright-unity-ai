@@ -14,7 +14,7 @@ namespace Tests.Editor.BehaviorTrees.Behaviors
         {
             var firstSpy = new BehaviorSpy(() => Behavior.Status.Success);
             var secondSpy = new BehaviorSpy(() => Behavior.Status.Success);
-            var sut = new Sequence(new List<Behavior> {firstSpy, secondSpy});
+            var sut = new Sequence(new List<Behavior> { firstSpy, secondSpy });
 
             BehaviorTestHarness.RunToComplete(sut);
 
@@ -28,7 +28,7 @@ namespace Tests.Editor.BehaviorTrees.Behaviors
         {
             var firstSpy = new BehaviorSpy(() => Behavior.Status.Failure);
             var secondSpy = new BehaviorSpy(() => Behavior.Status.Success);
-            var children = new List<Behavior> {firstSpy, secondSpy};
+            var children = new List<Behavior> { firstSpy, secondSpy };
             var sut = new Sequence(children);
 
             BehaviorTestHarness.RunToComplete(sut);
@@ -50,7 +50,7 @@ namespace Tests.Editor.BehaviorTrees.Behaviors
                 firstSpyCounter++;
                 return Behavior.Status.Running;
             });
-            var children = new List<Behavior> {firstSpy};
+            var children = new List<Behavior> { firstSpy };
             var sut = new Sequence(children);
 
             BehaviorTestHarness.RunToComplete(sut);

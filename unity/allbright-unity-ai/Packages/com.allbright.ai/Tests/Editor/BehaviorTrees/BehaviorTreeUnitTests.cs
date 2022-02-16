@@ -25,9 +25,9 @@ namespace Tests.Editor.BehaviorTrees
         [Test]
         public void BehaviorTree_CanPrintTreeStructure()
         {
-            var behaviorA = new Sequence(new List<Behavior> {new BehaviorFake(), new BehaviorFake()});
-            var behaviorB = new Sequence(new List<Behavior> {new BehaviorFake(), new BehaviorFake(), new BehaviorFake()});
-            var root = new Sequence(new List<Behavior> {behaviorA, behaviorB});
+            var behaviorA = new Sequence(new List<Behavior> { new BehaviorFake(), new BehaviorFake() });
+            var behaviorB = new Sequence(new List<Behavior> { new BehaviorFake(), new BehaviorFake(), new BehaviorFake() });
+            var root = new Sequence(new List<Behavior> { behaviorA, behaviorB });
             var sut = new BehaviorTree(root);
             var expectedResult = @"Behavior Tree
  Sequence

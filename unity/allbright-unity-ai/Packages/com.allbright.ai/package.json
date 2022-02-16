@@ -1,6 +1,6 @@
 {
   "name": "com.allbright.ai",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "displayName": "Andrew Allbright AI",
   "description": "Extendable video game agent ai library, intended for usage with the Unity game engine",
   "unity": "2020.3",
@@ -12,7 +12,8 @@
   "keywords": [
     "behavior trees",
     "finite state machines",
-    "Andrew Allbright"
+    "Andrew Allbright",
+    "Allbright"
   ],
   "author": {
     "name": "Andrew Allbright",

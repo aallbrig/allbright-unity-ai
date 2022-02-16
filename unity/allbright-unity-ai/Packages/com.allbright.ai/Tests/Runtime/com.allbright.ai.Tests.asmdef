@@ -1,14 +1,12 @@
 {
-    "name": "com.allbright.ai.EditorTests",
+    "name": "com.allbright.ai.Tests",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "com.allbright.ai"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,

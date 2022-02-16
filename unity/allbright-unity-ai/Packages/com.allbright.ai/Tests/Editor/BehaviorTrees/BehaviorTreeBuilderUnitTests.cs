@@ -19,6 +19,7 @@ namespace Tests.Editor.BehaviorTrees
 
         [Test]
         public void BTBuilder_CanBuildSelectorsAndAddChildren()
+        
         {
             var sut = new BehaviorTreeBuilder();
 
@@ -31,7 +32,7 @@ namespace Tests.Editor.BehaviorTrees
                 .Build();
 
             Assert.IsTrue(result.RootBehavior is Selector);
-            Assert.AreEqual(3, ((Selector) result.RootBehavior).ChildrenCount());
+            Assert.AreEqual(3, ((Selector)result.RootBehavior).ChildrenCount());
         }
 
         [Test]
@@ -48,7 +49,7 @@ namespace Tests.Editor.BehaviorTrees
                 .Build();
 
             Assert.IsTrue(result.RootBehavior is Sequence);
-            Assert.AreEqual(3, ((Sequence) result.RootBehavior).ChildrenCount());
+            Assert.AreEqual(3, ((Sequence)result.RootBehavior).ChildrenCount());
         }
     }
 }
