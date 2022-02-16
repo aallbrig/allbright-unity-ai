@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.andrewallbright.ai": {
-      "version": "file:com.andrewallbright.ai",
+    "com.allbright.ai": {
+      "version": "file:com.allbright.ai",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

@@ -1,6 +1,6 @@
 {
   "name": "com.allbright.ai",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "displayName": "Andrew Allbright AI",
   "description": "Extendable video game agent ai library, intended for usage with the Unity game engine",
   "unity": "2020.3",

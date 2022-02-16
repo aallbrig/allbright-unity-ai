@@ -1,10 +1,10 @@
 {
-    "name": "com.andrewallbright.ai.EditorTests.ai_Tests_Editor_Tests",
+    "name": "com.allbright.ai.EditorTests",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "com.andrewallbright.ai"
+        "com.allbright.ai"
     ],
     "includePlatforms": [
         "Editor"
