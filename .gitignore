@@ -1,0 +1,6 @@
+# jetbrains IDE
+.idea
+
+# osx
+.DS_Store
+

@@ -1,0 +1,22 @@
+{
+  "name": "com.andrewallbright.ai",
+  "version": "0.0.1",
+  "displayName": "Andrew Allbright AI",
+  "description": "Just trying to distribute my code without copy pasting",
+  "unity": "2020.3",
+  "unityRelease": "27f1",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://github.com/aallbrig/com.andrewallbright.ai/CHANGELOG.md",
+  "licensesUrl": "https://github.com/aallbrig/com.andrewallbright.ai/LICENSE.md",
+  "dependencies": {},
+  "keywords": [
+    "behavior trees",
+    "finite state machines",
+    "Andrew Allbright"
+  ],
+  "author": {
+    "name": "Andrew Allbright",
+    "email": "aallbrig@gmail.com",
+    "url": "https://www.andrewallbright.com"
+  }
+}
