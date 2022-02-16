@@ -11,6 +11,9 @@
 
 3. Hit the package manager's plus sign + to "Add package from git URL." Paste in the git URL above.
 
+### WebGL demo
+[https://aallbrig.github.io/allbright-unity-ai/webGL-build/WebGL/index.html](https://aallbrig.github.io/allbright-unity-ai/webGL-build/WebGL/index.html)
+
 ## Library documentation
 **Alpha** always read the code
 
