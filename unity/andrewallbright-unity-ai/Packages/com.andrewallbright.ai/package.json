@@ -5,7 +5,7 @@
   "description": "Just trying to distribute my code without copy pasting",
   "unity": "2020.3",
   "unityRelease": "27f1",
-  "documentationUrl": "https://example.com/",
+  "documentationUrl": "https://github.com/aallbrig/com.andrewallbright.ai/README.md",
   "changelogUrl": "https://github.com/aallbrig/com.andrewallbright.ai/CHANGELOG.md",
   "licensesUrl": "https://github.com/aallbrig/com.andrewallbright.ai/LICENSE.md",
   "dependencies": {},
