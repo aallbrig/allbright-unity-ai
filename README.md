@@ -14,6 +14,8 @@
 ### WebGL demo
 [https://aallbrig.github.io/allbright-unity-ai/webGL-build/WebGL/index.html](https://aallbrig.github.io/allbright-unity-ai/webGL-build/WebGL/index.html)
 
+![QR code with link to play the video game](img/play-game-qr-code.png)
+
 ### Source code
 [https://github.com/aallbrig/allbright-unity-ai](https://github.com/aallbrig/allbright-unity-ai)
 
